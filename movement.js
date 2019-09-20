@@ -8,20 +8,20 @@ $(document).ready(function(){
 function makeNewPosition(){
     
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
+    const h = $(window).height() - 50;
+    const w = $(window).width() - 50;
     
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
+    const nh = Math.floor(Math.random() * h);
+    const nw = Math.floor(Math.random() * w);
     
     return [nh,nw];    
     
 }
 
-function animateDiv(myclass){
+function animateDiv(selector){
     var newq = makeNewPosition();
-    $(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
-      animateDiv(myclass);        
+    $(selector).animate({ top: newq[0], left: newq[1] }, 2000,   () => {
+      animateDiv(selector);        
     });
     
 };
