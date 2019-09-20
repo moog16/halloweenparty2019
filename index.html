@@ -51,6 +51,12 @@
     opacity: 0.5;
   }
 
+  #scooby {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
   @media (min-width: 600px) {
     html {
       font-size: 28px;
@@ -73,6 +79,10 @@
   }
 </style>
 <body>
+  <audio controls autoplay preload='auto' id='scooby'>
+    <source src="scooby.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <div class='halloween'>
     <div class='halloween__cover'>
